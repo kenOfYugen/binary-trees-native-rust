@@ -4,6 +4,9 @@
 // contributed by the Rust Project Developers
 // contributed by TeXitoi
 
+extern crate libc;
+use libc::int32_t;
+
 extern crate typed_arena;
 
 use std::thread;
@@ -49,11 +52,8 @@ fn inner(depth: i32, iterations: i32) -> String {
 }
 
 #[no_mangle]
-pub extern fn run() {
-    let n = std::env::args_os().nth(1)
-        .and_then(|s| s.into_string().ok())
-        .and_then(|n| n.parse().ok())
-        .unwrap_or(10);
+pub extern fn run(input: int32_t) {
+    let n = input;
     let min_depth = 4;
     let max_depth = if min_depth + 2 > n {min_depth + 2} else {n};
 
