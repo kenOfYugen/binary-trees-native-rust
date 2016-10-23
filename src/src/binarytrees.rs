@@ -48,7 +48,8 @@ fn inner(depth: i32, iterations: i32) -> String {
             iterations * 2, depth, chk)
 }
 
-fn main() {
+#[no_mangle]
+pub extern fn run() {
     let n = std::env::args_os().nth(1)
         .and_then(|s| s.into_string().ok())
         .and_then(|n| n.parse().ok())

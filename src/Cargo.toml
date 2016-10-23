@@ -5,3 +5,8 @@ version = "0.1.0"
 
 [dependencies]
 typed-arena = "1.2.0"
+libc = "*"
+
+[lib]
+name = "binarytrees"
+crate-type = ["cdylib"]
