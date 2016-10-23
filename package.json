@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:rust": "cd src/ && cargo build --release"
+    "build:rust": "cd src/ && cargo build --release",
+    "autogypi": "autogypi",
+    "node-gyp": "node-gyp",
+    "install": "npm run build:rust && autogypi && node-gyp configure build",
+    "rebuild": "npm run build:rust && node-gyp rebuild"
   },
   "repository": {
     "type": "git",
@@ -13,6 +17,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "autogypi": "^0.2.2",
+    "nbind": "^0.3.4",
+    "node-gyp": "^3.4.0"
+  },
   "bugs": {
     "url": "https://github.com/kenOfYugen/binary-trees-native-rust/issues"
   },
