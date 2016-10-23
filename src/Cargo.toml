@@ -1,0 +1,7 @@
+[package]
+authors = ["ken"]
+name = "binary_trees"
+version = "0.1.0"
+
+[dependencies]
+typed-arena = "1.2.0"

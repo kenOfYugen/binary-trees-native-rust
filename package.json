@@ -1,0 +1,20 @@
+{
+  "name": "binary-trees-native-rust",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:rust": "cd src/ && cargo build --release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kenOfYugen/binary-trees-native-rust.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kenOfYugen/binary-trees-native-rust/issues"
+  },
+  "homepage": "https://github.com/kenOfYugen/binary-trees-native-rust#readme"
+}
